@@ -98,6 +98,15 @@
               <mat-icon>edit</mat-icon>
               Edit topic
             </button>
+            <button
+              mat-menu-item
+              aria-label="Remove round"
+              (click)="removeRound({round, roundIndex: roundNumber})"
+              [disabled]="!(permissionsService.canRemoveTopic() | async)"
+            >
+              <mat-icon>delete</mat-icon>
+              Remove topic
+            </button>
           </mat-menu>
         </div>
 
